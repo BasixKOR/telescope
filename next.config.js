@@ -1,5 +1,6 @@
 const withCSS = require('@zeit/next-css')
 const path = require('path')
+require('dotenv').config()
 
 module.exports = withCSS({
   webpack(config, options) {
@@ -21,5 +22,9 @@ module.exports = withCSS({
       "@utils": path.resolve(__dirname, "src/utils")
     }
     return config
+  },
+  env: {
+    AGOLIA_APP: process.env.AGOLIA_APP,
+    AGOLIA_KEY: process.env.AGOLIA_KEY
   },
 })
