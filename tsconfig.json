@@ -19,8 +19,9 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@components": ["src/components"],
-      "@pages": ["src/pages"]
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "exclude": [
