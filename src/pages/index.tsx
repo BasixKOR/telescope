@@ -1,33 +1,17 @@
-import React from 'react'
-import Head from 'next/head'
-import { styled } from 'linaria/react'
-
-const Box = styled.div`
-  margin-top: 40px;
-  margin-left: 40px;
-  height: 200px;
-  width: 200px;
-  background-color: tomato;
-  animation: spin 2s linear infinite;
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
-`
+import React from 'react';
+import Head from 'next/head';
+import Layout from '@components/Layout';
+import { Search } from '@utils/agolia';
+import { SearchBox, Hits } from 'react-instantsearch-dom';
+import Hit from '@components/Hit';
 
 export default () => {
   return (
-    <>
-      <Head>
-        <title>With Linaria</title>
-      </Head>
-      <Box>Zero runtime CSS in JS</Box>
-    </>
-  )
-}
+    <Layout>
+      <Search>
+        <SearchBox autoFocus />
+        <Hits />
+      </Search>
+    </Layout>
+  );
+};
