@@ -23,11 +23,11 @@ const Box = styled.div`
 
 export default () => {
   return (
-    <React.Fragment>
+    <>
       <Head>
         <title>With Linaria</title>
       </Head>
       <Box>Zero runtime CSS in JS</Box>
-    </React.Fragment>
+    </>
   )
 }

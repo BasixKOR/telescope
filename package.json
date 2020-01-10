@@ -1,5 +1,5 @@
 {
-  "name": "with-linaria",
+  "name": "telescope",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
@@ -8,10 +8,18 @@
   },
   "dependencies": {
     "@zeit/next-css": "1.0.1",
+    "algoliasearch": "^3.35.1",
     "linaria": "1.2.4",
     "next": "latest",
     "react": "16.8.3",
     "react-dom": "16.8.3"
   },
-  "license": "ISC"
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@types/algoliasearch": "^3.34.7",
+    "@types/node": "^13.1.6",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "typescript": "^3.7.4"
+  }
 }
