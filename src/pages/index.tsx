@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '@components/Layout';
-import { Search } from '@utils/agolia';
+import { Search } from '@utils/algolia';
 import Hits from '@components/Hits';
 import SearchBox from '@components/SearchBox';
 import { styled } from 'linaria/react';

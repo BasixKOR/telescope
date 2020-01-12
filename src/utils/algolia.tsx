@@ -3,8 +3,8 @@ import { InstantSearch, UsingSearchClientProps } from 'react-instantsearch-dom';
 import React from 'react';
 
 export const searchClient = algoliasearch(
-  process.env.AGOLIA_APP!,
-  process.env.AGOLIA_KEY!
+  process.env.ALGOLIA_APP!,
+  process.env.ALGOLIA_KEY!
 );
 
 export type SearchProps = Omit<

@@ -24,7 +24,7 @@ module.exports = withCSS({
     return config
   },
   env: {
-    AGOLIA_APP: process.env.AGOLIA_APP,
-    AGOLIA_KEY: process.env.AGOLIA_KEY
+    ALGOLIA_APP: process.env.ALGOLIA_APP,
+    ALGOLIA_KEY: process.env.ALGOLIA_KEY
   },
 })
