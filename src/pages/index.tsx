@@ -1,15 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
 import Layout from '@components/Layout';
 import { Search } from '@utils/agolia';
-import { SearchBox, Hits } from 'react-instantsearch-dom';
-import Hit from '@components/Hit';
+import Hits from '@components/Hits';
+import SearchBox from '@components/SearchBox';
+
+import 'instantsearch.css/themes/reset.css';
+import { styled } from 'linaria/react';
+
+const SearchContainer = styled.header`
+  background-color: #f5f6fa;
+  display: flex;
+`;
 
 export default () => {
   return (
     <Layout>
       <Search>
-        <SearchBox autoFocus />
+        <SearchContainer>
+          <SearchBox />
+        </SearchContainer>
         <Hits />
       </Search>
     </Layout>
