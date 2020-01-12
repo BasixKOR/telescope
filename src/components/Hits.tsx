@@ -52,6 +52,7 @@ const Tag = styled.span<TagProps>`
 const Link = styled.a`
   color: black;
   text-decoration: none;
+  word-break: break-all;
   :hover, :focus {
     color: #718093;
   }
