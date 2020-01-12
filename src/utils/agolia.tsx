@@ -7,7 +7,10 @@ export const searchClient = algoliasearch(
   process.env.AGOLIA_KEY!
 );
 
-export type SearchProps = Omit<UsingSearchClientProps, 'searchClient' | 'indexName'>
+export type SearchProps = Omit<
+  UsingSearchClientProps,
+  'searchClient' | 'indexName'
+>;
 
 export const Search: React.FC<SearchProps> = ({ children, ...props }) => (
   <InstantSearch searchClient={searchClient} indexName="repos" {...props}>
