@@ -17,6 +17,7 @@ const HitContainer = styled.div`
   height: fit-content;
   margin: 0 1rem;
   margin-top: 1rem;
+  padding: 1rem;
   border: 1px solid #dcdde1;
   box-shadow: 0px 0px 2px 0px #dcdde1;
 
@@ -24,11 +25,6 @@ const HitContainer = styled.div`
     margin-bottom: 1rem;
   }
 
-  svg {
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-  }
   div {
     flex: 1;
   }
@@ -36,6 +32,10 @@ const HitContainer = styled.div`
 
 const Header = styled.h1`
   margin: 0;
+  svg {
+    height: 1em;
+    margin-right: .2em;
+  }
 `;
 
 type TagProps = { color?: string } & HTMLAttributes<HTMLSpanElement>;
@@ -45,26 +45,27 @@ const Tag = styled.span<TagProps>`
   padding: 0 0.5em;
   border-radius: 1em;
   margin-left: 1em;
-  background-color: ${props => props.color ?? 'gray'};
+  background-color: ${props => props.color ?? '#718093'};
   color: white;
 `;
 
 const Link = styled.a`
   color: black;
   text-decoration: none;
-  :hover {
-    color: gray;
+  :hover, :focus {
+    color: #718093;
   }
 `;
 
 const HitHighlight = ({ hit }: { hit: Hit<Repository> }) => (
   <div>
     <Header>
+      <Octicon icon={Repo} />
       <Link href={`//github.com/${hit.nameWithOwner}`}>
         <Highlight attribute="nameWithOwner" hit={hit} tagName="mark" />
       </Link>
       {hit.primaryLanguage.name && <Tag>{hit.primaryLanguage.name}</Tag>}
-      <Tag color="#fbc531">★ {hit.stargazers.totalCount}</Tag>
+      <Tag color="#e1b12c">★ {hit.stargazers.totalCount}</Tag>
     </Header>
     <Highlight attribute="description" hit={hit} tagName="mark" />
   </div>
@@ -74,7 +75,6 @@ export default connectHits<Repository>(({ hits }) => (
   <Hits>
     {hits.map(hit => (
       <HitContainer key={hit.objectID}>
-        <Octicon icon={Repo} size="large" />
         <HitHighlight hit={hit} />
       </HitContainer>
     ))}
