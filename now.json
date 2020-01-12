@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {
+      "AGOLIA_APP": "@agolia-app",
+      "AGOLIA_KEY": "@agolia-key"
+    }
+  }
+}
