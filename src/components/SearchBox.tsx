@@ -7,6 +7,21 @@ type SearchInputProps = { invaild: boolean } & React.InputHTMLAttributes<
   HTMLInputElement
 >;
 
+const SearchContainer = styled.header`
+  background-color: #f5f6fa;
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  & + section {
+    margin-top: 100px;
+  }
+`;
+
 const SearchInput = styled.input<SearchInputProps>`
   display: block;
   box-sizing: border-box;
@@ -24,7 +39,7 @@ const SearchInput = styled.input<SearchInputProps>`
   }
 `;
 
-const SearchBox = connectSearchBox(
+export const SearchBox = connectSearchBox(
   ({ currentRefinement, refine, isSearchStalled }) => (
     <SearchInput
       value={currentRefinement}
@@ -34,4 +49,8 @@ const SearchBox = connectSearchBox(
   )
 );
 
-export default SearchBox;
+export default () => (
+  <SearchContainer>
+    <SearchBox />
+  </SearchContainer>
+);
