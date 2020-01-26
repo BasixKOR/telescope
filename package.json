@@ -16,7 +16,8 @@
     "next": "latest",
     "react": "16.8.3",
     "react-dom": "16.8.3",
-    "react-instantsearch-dom": "^6.1.0"
+    "react-instantsearch-core": "^6.2.0",
+    "react-instantsearch-dom": "^6.1.0",
   },
   "license": "BSD-3-Clause",
   "devDependencies": {

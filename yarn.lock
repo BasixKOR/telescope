@@ -4903,6 +4903,17 @@ react-instantsearch-core@^6.1.0:
     fast-deep-equal "^2.0.1"
     prop-types "^15.5.10"
 
+react-instantsearch-core@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-6.2.0.tgz#b9d9b857ad77ffc92232bbe5e6164e6229ab0ce0"
+  integrity sha512-FBeLOgVvcMUhIPBEVt7TtR5MnE2VKHbWzPs0fbpmaTQCanUTGQuU1X7NAlsdl9QWFhfgJjQqeWvdaXHKnjQ8WQ==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    "@types/algoliasearch" "^3.30.16"
+    algoliasearch-helper "^3.0.0"
+    fast-deep-equal "^2.0.1"
+    prop-types "^15.5.10"
+
 react-instantsearch-dom@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-6.1.0.tgz#dc5b7b15fd0e331d86a5fc83e4bed87d3600fafb"
