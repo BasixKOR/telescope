@@ -20,3 +20,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# This is the Yarn build state; it's local to each clone
+.yarn/build-state.yml
+
+# Personally I don't think uploading caches on VCS is a good idea, so:
+.yarn/cache/**
+.yarn/unplugged/**

@@ -7,8 +7,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@components": "link:./src/components",
+    "@pages": "link:./src/pages",
     "@primer/octicons-react": "^9.3.1",
     "@types/react-instantsearch-dom": "^5.2.6",
+    "@utils": "link:./src/utils",
     "@zeit/next-css": "1.0.1",
     "algoliasearch": "^3.35.1",
     "instantsearch.css": "^7.3.1",
@@ -17,10 +20,7 @@
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-instantsearch-core": "^6.2.0",
-    "react-instantsearch-dom": "^6.1.0",
-    "@components": "link:./src/components",
-    "@pages":"link:./src/pages",
-    "@utils": "link:./src/utils"
+    "react-instantsearch-dom": "^6.1.0"
   },
   "license": "BSD-3-Clause",
   "devDependencies": {
@@ -28,6 +28,7 @@
     "@types/node": "^13.1.6",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
+    "@yarnpkg/pnpify": "^2.0.0-rc.16",
     "dotenv": "^8.2.0",
     "prettier": "^1.19.1",
     "typescript": "^3.7.4"
