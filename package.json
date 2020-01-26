@@ -18,6 +18,9 @@
     "react-dom": "16.8.3",
     "react-instantsearch-core": "^6.2.0",
     "react-instantsearch-dom": "^6.1.0",
+    "@components": "link:./src/components",
+    "@pages":"link:./src/pages",
+    "@utils": "link:./src/utils"
   },
   "license": "BSD-3-Clause",
   "devDependencies": {
